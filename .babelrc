@@ -1,0 +1,33 @@
+{
+  "env": {
+    "testing": {
+      "presets": ["latest"]
+    },
+    "commonjs": {
+      "presets": [[
+        "latest", {
+          "es2015": {
+            "modules": false
+          },
+          "es2016": false,
+          "es2017": false
+        }
+      ]],
+      "plugins": [
+        ["transform-es2015-modules-commonjs", {"allowTopLevelThis": true}, "external-helpers"]
+      ]
+    },
+    "es": {
+      "presets": [[
+        "latest", {
+          "es2015": {
+            "modules": false
+          }
+        }
+      ]],
+      "plugins": [
+        ["external-helpers"]
+      ]
+    }
+  }
+}

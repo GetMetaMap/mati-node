@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Mati.html">Mati</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#createIdentity">createIdentity</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#deleteSubscription">deleteSubscription</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#downloadPicture">downloadPicture</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#getDocument">getDocument</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#getIdentity">getIdentity</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#getPicture">getPicture</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#getSubscription">getSubscription</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#getVerifiedData">getVerifiedData</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#listDocumentPictures">listDocumentPictures</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#listDocuments">listDocuments</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#listIdentities">listIdentities</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#listSubscriptions">listSubscriptions</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#subscribeWebhook">subscribeWebhook</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#updateFields">updateFields</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#uploadIdBack">uploadIdBack</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Mati.html#uploadIdFront">uploadIdFront</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="MatiBase.html">MatiBase</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#validateRequest">validateRequest</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#webhookMiddleware">webhookMiddleware</a></span></li>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>mati-sdk</h1><!--
+[![Build Status][circleci-image]][circleci-url]
+[![NPM version][npm-image]][npm-url]
+[![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
+-->
+<p>Node.js client library for <a href="https://getmati.io">Mati</a>.</p>
+<h2>Installation</h2><pre class="prettyprint source lang-bash"><code>  npm install mati-sdk</code></pre><h2>Documentation</h2><p>You can find this library documentation in this <a href="http://mati.github.io/mati-sdk/">page</a>.
+This library is intended to ease the integration of mati using node. It handles authentication automatically, and provides developers a friendlier interaction. It also provides a <a href="global.html#webhookMiddleware">webhook middleware</a> for express and a header <a href="global.html#validateRequest">webhook validation</a> function for webhooks.</p>
+<p>For more information about <a href="https://getmati.io">mati api</a> check our <a href="https://matikyc.docs.apiary.io/">api documentation page</a>.</p>
+<p>The <strong>matiClient</strong> constructor takes a client ID, and client Secret paramenter.</p>
+<pre class="prettyprint source lang-js"><code>var matiClient = require('mati-sdk').Mati;
+var mati = new matiClient({
+    'clientId': '{your_client_Id}',
+    'secretId': '{your_secret_Id}',
+});</code></pre><p>Be aware that all class methods return promises.</p>
+<pre class="prettyprint source lang-js"><code>mati.listIdentities()
+  .then(identities => {
+    console.log(identities)
+  })
+  .catch(err=> {
+    // Handle error.
+  });</code></pre><h2>What is Mati?</h2><p>Mati verifies your users on the fly with the most advanced and secured technology. We’re creating a network of KYC verified people. If your user is already in Mati they won’t need to upload the required documents again, which make the verification process easier and smoother. Mati is using AI for assigning a verification score to a user based on their face match and documents.</p>
+<h2>Mati helps you to:</h2><ul>
+<li>Mati allows you verify your customers using our <strong>biometric technology</strong>.</li>
+<li>User verification flow automation</li>
+<li>Customize your user verfication flow</li>
+<li>Information sent directly to your backend</li>
+<li>Official document checking. Support for mexican national ID document validation <em>CURP</em> and <em>INE</em>.</li>
+<li>Facematch between selfie and document ID photo.</li>
+<li>Livness check [not supported in this library yet]</li>
+</ul>
+<h2>Create a free Mati Account</h2><ol>
+<li>Go to <a href="https://dashboard.mati.io/auth/register">mati dashboard</a> and click &quot;Try it for free&quot;.</li>
+<li>Create you API credentials on configuration screen.</li>
+</ol>
+<h2>Issue Reporting</h2><p>If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The <a href="https://getmati.com/whitehat">Responsible Disclosure Program</a> details the procedure for disclosing security issues.</p>
+<h2>WE ARE HIRING!</h2><p>We are looking for the most talented people, if you're looking for an oportunity in an amazing startup, contact us!</p>
+<h2>License</h2><p>This project is licensed under the MIT license. See the <a href="LICENSE">LICENSE</a> file for more info.</p>
+<!-- Vaaaaarrrrsss --></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Jul 11 2018 09:54:21 GMT-0500 (CDT) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
